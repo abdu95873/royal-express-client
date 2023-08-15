@@ -20,9 +20,13 @@ import EmployeesHome from "../components/Dashboard/Employees/EmployeesHome.jsx";
 import EmployeesPicked from "../components/Dashboard/Employees/EmployeesPicked.jsx";
 import UserHome from "../components/Dashboard/User/UserHome.jsx";
 import UserDeliveredOrder from "../components/Dashboard/User/UserDeliveredOrder.jsx";
-import UserMyRequests from "../components/Dashboard/User/UserMyRequests.jsx";
+import UserDuePayment from "../components/Dashboard/User/UserDuePayment.jsx";
 import UserSendPickupRequest from "../components/Dashboard/User/UserSendPickupRequest.jsx";
 import ManageUsers from "../components/Dashboard/Admin/ManageUsers.jsx";
+import ContactUs from "../components/Home/Contact/ContactUs.jsx";
+import Payment from "../components/Dashboard/User/Payments/Payment.jsx";
+import PaymentDone from "../components/Dashboard/User/Payments/PaymentDone.jsx";
+import UserMyRequests from "../components/Dashboard/User/UserMyRequests.jsx";
 
 
 
@@ -36,6 +40,11 @@ export const router = createBrowserRouter([
                 path: '/',
                 element: <Home></Home>,
                 loader:() => fetch('http://localhost:5000/areas')
+            },
+            {
+                path: '//contact',
+                element: <ContactUs></ContactUs>
+                
             },
             {
                 path: '/login',
@@ -111,6 +120,10 @@ export const router = createBrowserRouter([
                 element:<UserHome></UserHome>
             },
             {
+                path: '/dashboard/user/UserDuePayment',
+                element:<UserDuePayment></UserDuePayment>
+            },
+            {
                 path: '/dashboard/user/UserMyRequests',
                 element:<UserMyRequests></UserMyRequests>
             },
@@ -123,6 +136,14 @@ export const router = createBrowserRouter([
                 path: '/dashboard/user/UserDeliveredOrders',
                 element:<UserDeliveredOrder></UserDeliveredOrder>
             },
+            {
+                path: 'payment',
+                element: <Payment></Payment>
+            },
+            {
+                path:'paymentDone',
+                element: <PaymentDone></PaymentDone>
+            }
             
             
         ] 

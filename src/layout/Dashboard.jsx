@@ -98,8 +98,10 @@ const Dashboard = () => {
                         {isUser ? <>
                             <li ><NavLink  to="/dashboard/user/Home" ><AnimatedFaUtensils style={iconAnimation} /> User Home</NavLink></li>
                             <li><NavLink  to="/dashboard/user/UserSendPickupRequest"><AnimatedFaBook style={iconAnimation} /> Send Pickup Request</NavLink></li>
-                            <li><NavLink  to="/dashboard/user/UserMyRequests"><FaCalendarAlt></FaCalendarAlt> MyRequests</NavLink></li>
+                            <li><NavLink  to="/dashboard/user/UserDuePayment"><FaCalendarAlt></FaCalendarAlt> Make Payment</NavLink></li>
+                            <li><NavLink  to="/dashboard/user/UserMyRequests"><FaCalendarAlt></FaCalendarAlt> My Requests</NavLink></li>
                             <li><NavLink  to="/dashboard/user/UserDeliveredOrders"><AnimatedFaWallet style={iconAnimation} /> Delivered Order</NavLink></li>
+                           
                         </> : <></>}
                         <div className="divider"></div>
                        

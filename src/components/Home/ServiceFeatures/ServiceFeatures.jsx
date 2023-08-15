@@ -10,7 +10,7 @@ import img6 from '../../../assets/courier ui/features 6.png';
 
 const ServiceFeatures = () => {
     return (
-        <section className="my-32 ">
+        <section className="my-32 " id="services-section">
             <SectionTitle 
                 heading={"সার্ভিস সমূহ"}
             ></SectionTitle>

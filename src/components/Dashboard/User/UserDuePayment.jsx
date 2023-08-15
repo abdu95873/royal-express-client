@@ -1,9 +1,10 @@
 import React, { useContext, useEffect } from 'react';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { useQuery } from 'react-query';
+import { Link } from 'react-router-dom';
 
 
-const UserMyRequests = () => {
+const UserDuePayment = () => {
     const { user } = useContext(AuthContext);
 
     const { data: allOrders = [], refetch } = useQuery({
@@ -20,17 +21,22 @@ const UserMyRequests = () => {
     }, [user]);
 
     // Filter orders by status "Order Placed"
-    const orderPlacedOrders = allOrders.filter((order) => order.status === 'Order Placedered');
+    const orderPlacedOrders = allOrders.filter((order) => order.status === 'Unpaid');
+    console.log(orderPlacedOrders)
 
     return (
         <div className='w-full'>
-            <div className=''>
+            <div className='pt-24'>
                 <section>
-                    <header className='text-4xl font-bold text-center'>My Requests</header>
+                    <header className='text-4xl font-bold text-center'>Make Payment</header>
                     <div className='divider'></div>
+
                 </section>
                 <div className='md:grid-cols-3 justify-between my-8 '>
                     <div>
+                        <div className='m-3 flex justify-end'>
+                            <Link to="/dashboard/payment"><button className='btn btn-sm btn-primary justify-end'>Make Payment</button></Link>
+                        </div>
                         <table className='table'>
                             <thead>
                                 <tr className='font-bold text-2xl bg-slate-300'>
@@ -38,9 +44,10 @@ const UserMyRequests = () => {
                                     <th>From</th>
                                     <th>To</th>
                                     <th>Date</th>
-                                    <th>Weight</th>
+                                    <th>Tracking Id</th>
                                     <th>Charge</th>
                                     <th>Status</th>
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -50,9 +57,10 @@ const UserMyRequests = () => {
                                         <td>{order.fromName}</td>
                                         <td>{order.toName}</td>
                                         <td>{order.date}</td>
-                                        <td>{0 + order.kg} KG</td>
+                                        <td>{order._id}</td>
                                         <td>{order.price}</td>
                                         <td>{order.status}</td>
+
                                     </tr>
                                 ))}
                             </tbody>
@@ -65,4 +73,4 @@ const UserMyRequests = () => {
 };
 
 
-export default UserMyRequests;
+export default UserDuePayment;

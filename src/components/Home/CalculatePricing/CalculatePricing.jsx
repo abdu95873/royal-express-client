@@ -27,7 +27,7 @@ const CalculatePricing = () => {
 
     return (
         <section>
-        <div className="hero py-11 bg-base-200">
+        <div className="hero py-11 bg-base-200" >
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Calculate Pricing</h1>
@@ -43,7 +43,7 @@ const CalculatePricing = () => {
                             <label className="label">
                                 <span className="label-text">পণ্যের ওজন ( সর্বোচ্চ 10 কেজি ) </span>
                             </label>
-                            <input type="text" placeholder="KG" {...register("kg", { required: true })} className="input input-bordered" />
+                            <input type="text" placeholder="KG" {...register("kg", { required: true})} className="input input-bordered" />
                         </div>
                         
                         <div className="form-control mt-6">
