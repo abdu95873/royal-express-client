@@ -51,7 +51,7 @@ const Register = () => {
             .then(result => {
                 emailVerification(result.user)
                 saveUsers(user);
-                navigate('/');
+                navigate('/login');
 
             })
             .catch(error => {
@@ -98,7 +98,7 @@ const Register = () => {
                         name: data.name,
                         email: data.email,
                         password: data.password,
-                        role: 'admin',
+                        role: 'user',
 
                     };
 

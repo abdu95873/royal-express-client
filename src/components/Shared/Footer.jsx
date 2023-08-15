@@ -7,7 +7,9 @@ const Footer = () => {
         <div className="footer p-10 bg-neutral text-neutral-content">
   <div>
     <img className='w-1/4' src={logo} alt="" />
+    <div className='ml-3'>
     <p>Royal Express Ltd.<br/>Providing reliable courier service since 2023</p>
+    </div>
   </div> 
   <div>
     <span className="footer-title">Social</span> 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import SectionTitle from '../../SectionTitle/SectionTitle';
 import Select from 'react-select';
 import { useForm } from 'react-hook-form';
+import { FaCalculator  } from 'react-icons/fa';
 
 const CalculatePricing = () => {
     const { register, handleSubmit, errors } = useForm();
@@ -26,11 +27,11 @@ const CalculatePricing = () => {
     };
 
     return (
-        <section>
+        <section id="pricing-section">
         <div className="hero py-11 bg-base-200" >
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Calculate Pricing</h1>
+                    <h1 className="text-5xl font-bold"> Calculate Pricing</h1>
                     <p className="py-6">
                         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
                         excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
@@ -47,9 +48,9 @@ const CalculatePricing = () => {
                         </div>
                         
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Calculate</button>
+                            <button className="btn btn-primary"><FaCalculator></FaCalculator> Calculate</button>
                             {showResult && <div className="mt-4 text-3xl font-bold">Delivery fee: {calculationResult} Tk</div>}
-                            <button type="button" className="btn btn-secondary mt-4 " onClick={handleReset}>Reset</button>
+                            <button type="button" className="btn btn-error mt-4 " onClick={handleReset}> Reset</button>
                         </div>
                     </form>
                 </div>

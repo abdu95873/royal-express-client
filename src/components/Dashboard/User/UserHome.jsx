@@ -10,9 +10,13 @@ const UserHome = () => {
             <Link to='/dashboard/user/UserDuePayment'>
                 <button className="btn btn-success m-10 w-60 h-36 text-2xl">My Requests</button>
             </Link>
+            <Link to='/dashboard/user/UserDuePayment'>
+                <button className="btn btn-info m-10 w-60 h-36 text-2xl">Make Payment</button>
+            </Link>
             <Link to='/dashboard/user/UserDeliveredOrders'>
                 <button className="btn btn-warning m-10 w-60 h-36 text-2xl">Delivered Orders</button>
             </Link>
+            
 
 
         </div>
