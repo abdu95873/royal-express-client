@@ -20,7 +20,7 @@ const UserMyRequests = () => {
     }, [user]);
 
     // Filter orders by status "Order Placed"
-    const orderPlacedOrders = allOrders.filter((order) => order.status === 'Order Placedered');
+    const orderPlacedOrders = allOrders.filter((order) => order.status === 'Order Placed');
 
     return (
         <div className='w-full'>

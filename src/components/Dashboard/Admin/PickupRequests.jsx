@@ -78,7 +78,7 @@ const PickupRequests = () => {
                                             <button
                                                 className="btn btn-success btn-xs"
                                                 onClick={() => handleStatus('Ready For Pickup', order._id)}                                            >
-                                                Ready For Pickup
+                                                Assign For Pickup
                                             </button>
                                         ) : null}
                                            

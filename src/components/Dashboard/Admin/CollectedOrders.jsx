@@ -80,7 +80,7 @@ const CollectedOrders = () => {
                                                     onClick={() => handleStatus('Ready For Delivery', order._id)}
                                                     
                                                 >
-                                                    Ready For Delivery
+                                                    Assign For Delivery
                                                 </button>
                                             ) : null}
                                             <br />

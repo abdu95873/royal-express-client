@@ -49,7 +49,7 @@ const ManageUsers = () => {
                             users?.map((user, index) => <>
                                 <tr className="bg-base-200 border-t-2 ">
                                     <td>{index + 1}</td>
-                                    <td>{user?.name}</td>
+                                    <td>{user?.name ? user.name : user?.email}</td>
                                     <td>
                                         {user?.role == 'admin' ? 'Admin' : ''}
                                         {user?.role == 'employees' ? 'employees' : ''}

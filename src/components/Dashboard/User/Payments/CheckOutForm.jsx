@@ -159,13 +159,13 @@ const CheckOutForm = ({ order, price }) => {
             }
             <div className='my-5'>
                 <button className='btn btn-sm btn-neutral'>
-                    <Link to='/dashboard/admin/PickupRequests'>
+                    <Link to='/dashboard/user/UserMyRequests'>
                         <div className='flex gap-3'>
                             <span>
                                 <FaArrowLeft />
                             </span>
                             <span>
-                                Back to see the order location
+                                Back to see My Requests
                             </span>
                         </div>
                     </Link>

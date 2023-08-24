@@ -49,6 +49,17 @@ const UserSendPickupRequest = () => {
     //     setSelectedDroppingOption(selectedOption);
     // };
 
+    const generateTrackingId = () => {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        const length = 10; // You can adjust the length of the trackingId
+        let trackingId = '';
+        for (let i = 0; i < length; i++) {
+            const randomIndex = Math.floor(Math.random() * characters.length);
+            trackingId += characters[randomIndex];
+        }
+        return trackingId;
+    };
+
 
     const onSubmit = (data) => {
 
@@ -63,6 +74,8 @@ const UserSendPickupRequest = () => {
             return `${day}/${month}/${year}`;
         }
 
+        
+
 
 
         const fromName = data.fromName;
@@ -74,7 +87,8 @@ const UserSendPickupRequest = () => {
         const toNumber = data.toNumber;
         const price = 44 + (15 * kg);
         const email = user.email;
-        
+        const trackingId = generateTrackingId();
+
 
 
         const order = {
@@ -88,9 +102,9 @@ const UserSendPickupRequest = () => {
             toNumber,
            
             date: formattedDate,
-            status: 'Order Placed',
+            status: 'Unpaid',
             price,
-            date: formattedDate,
+            trackingId: trackingId,
             email,
         }
         console.log(order);
